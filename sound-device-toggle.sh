@@ -1,8 +1,7 @@
 #! /bin/bash
 # Toggle the sound device between PCH and HDMI
 # Works by editing ~/.asoundrc config, and chaning parameters.
-# Newbie script, uses hardcoded values
-
+# newbie script which is most likely obosolete now, i use pulseaudio.
 # CONSTANTS
 HDMI="hw:0,7"
 PCH="hw:1,0"
@@ -50,7 +49,7 @@ echo "Default device is now $new_device_name"
 
 echo "#ALSA Library configuration file" > $file
 echo "#Include settings that are under control of asoundconf" >> $file
-echo "</home/jocke/.asoundrc.asoundconf>" >> $file
+echo "</home/user/.asoundrc.asoundconf>" >> $file
 echo "" >> $file
 echo "# Sets the default device to $new_device_name" >> $file
 echo "pcm.!default {" >> $file
